@@ -46,7 +46,7 @@ const dropped = (e) => {
 	const oldPlace = Number(document.getElementById(tile).parentElement.id.slice(6)) - 1;
 	const newPlace = Number(e.target.id.slice(6)) - 1;
 
-	if (!(Math.abs(oldPlace - newPlace) == 4 || Math.abs(oldPlace - newPlace) == 1)) return;
+	if (!(Math.abs(oldPlace - newPlace) === 4 || Math.abs(oldPlace - newPlace) === 1)) return;
 
 	const [i, j] = [Math.min(oldPlace, newPlace), Math.max(oldPlace, newPlace)];
 	setShuffledArray([
