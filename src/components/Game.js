@@ -15,7 +15,7 @@ useEffect(() => {
 	let won = true;
 	for (let i = 0; i < shuffledArray.length - 1; i++) {
 	const value = shuffledArray[i];
-	if (i == value - 1) continue;
+	if (i === value - 1) continue;
 	else {
 		won = false;
 		break;
@@ -26,7 +26,7 @@ useEffect(() => {
 	setTimerActive(false);
 	}
 	return;
-}, [moves]);
+}, [moves, shuffledArray]);
 
 const newGame = () => {
 	setMoves(0);
